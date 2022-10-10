@@ -4,11 +4,12 @@ import {  RouterModule, Routes } from '@angular/router';
 import { AgregarEditarUsuarioComponent } from './agregar-editar-usuario/agregar-editar-usuario.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { MostrarUsuariosComponent } from './mostrar-usuarios/mostrar-usuarios.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const rutas:Routes=[
     { path: '', component:UsuariosComponent},
-    {path:'home', component:UsuariosComponent},
-    {path:'agregar/:id', component:AgregarEditarUsuarioComponent},
+    {path:'home', component:UsuariosComponent ,canActivate: [AuthGuard]},
+    {path:'agregar/:id', component:AgregarEditarUsuarioComponent },
     {path:'editar/:id', component:AgregarEditarUsuarioComponent},
 
 ];
