@@ -26,4 +26,5 @@ export class LoginComponent {
                 console.log(error)
             });
     }
+
 }
