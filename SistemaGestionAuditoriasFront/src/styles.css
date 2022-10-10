@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family: 'Mulish', sans-serif;
+    position: relative;
+}
+body::after {
+    content: '';
+    display: block;
+    height: 100px; /* Set same as footer's height */
+}
+.header {
+    background-color: #01239c;
+    width: 100%;
+    height: 75px;    
+        
+}
+.header__nav{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 100%;
+
+}
+.header__nav--brand a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.header__nav--navlinks {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;    
+}
+.header__nav--navlinks li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+.main{    
+    padding: 3rem 10rem;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: column;
+}
+.main__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main__content {
+    margin-top: 2rem;
+}
+.ContentTable {
+    border-collapse: collapse;
+    width: 100%;    
+}
+.ContentTable th, .ContentTable td {    
+    border: 1px solid rgb(195, 194, 194);
+    padding: 8px;
+}
+.ContentTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #008CBA;
+    color: white;
+
+}
+.ContentTable td {
+    background-color: #ffffff;
+}
+.ActionButtons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+.btn{    
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 0 1rem; */
+    cursor: pointer;
+}
+.btnPrimary {
+    background-color: #4CAF50;
+}
+.btnPrimary:hover{
+    background-color: #46a049;
+}
+.btnSecondary{
+    background-color: #d9d9d9; 
+    color: black;
+}
+.btnSecondary:hover{
+    background-color: #cccccc; 
+}
+
+.ContentForm {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(195, 194, 194);
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.form-group input {
+    border: 1px solid rgb(195, 194, 194);
+    padding: 8px 16px;
+    margin-top: 2px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+    background-color: rgba(102, 102, 102, 0.4);
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 2rem;
+}

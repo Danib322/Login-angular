@@ -1,0 +1,40 @@
+
+            <h1>Usuarios</h1>
+            <h3>Listado de usuarios registrados en el sistema</h3>
+            <div class="ActionButtons">
+                <button type="button" class="btn btnPrimary" (click)="nuevoUsuario() ">
+                    Agregar usuario
+                    
+                 </button> 
+            </div>          
+            
+            
+            <table class="ContentTable">
+                <thead>
+                    
+                    <th>Nombre de Usuario</th>
+                    <th>Cedula</th>
+                    <th colspan="3">TipoUsuario</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Usuario of UsuariosList$|async">
+                        
+                        <td>{{Usuario.nombreUsuario}}</td>
+                        <td>{{Usuario.cedula}}</td>
+                        <td>{{Usuario.tipoUsuario}}</td>
+                        <td>
+                            <button class="btn btnSecondary" (click)="ActualizarUsusario(Usuario.usuarioId)">
+                                Editar
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btnSecondary" (click)="EliminarUsuario(Usuario.usuarioId)">
+                                Eliminiar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            
+               
+                
+            </table>

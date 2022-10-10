@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{509F5B57-7A96-4E97-A919-3A24D9FBFA0B}|Default">
+  <MonoDevelop.Ide.ItemProperties.SistemaGestionAuditoriaBackend PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SistemaGestionAuditoriaBackend/Controllers/UsuariosController.cs">
+    <Files>
+      <File FileName="SistemaGestionAuditoriaBackend/Services/AuthService.cs" Line="49" Column="42" />
+      <File FileName="SistemaGestionAuditoriaBackend/Program.cs" Line="23" Column="10" />
+      <File FileName="SistemaGestionAuditoriaBackend/Controllers/WeatherForecastController.cs" Line="12" Column="20" />
+      <File FileName="SistemaGestionAuditoriaBackend/Controllers/AuthController.cs" Line="21" Column="28" />
+      <File FileName="SistemaGestionAuditoriaBackend/Controllers/UsuariosController.cs" Line="26" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SistemaGestionAuditoriaBackend" expanded="True">
+            <Node name="SistemaGestionAuditoriaBackend" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Dto" expanded="True" />
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Enums" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jescudero/Documents/playground/Sistema-de-gestion-de-auditria/SistemaGestionAuditoriaBackend/SistemaGestionAuditoriaBackend/Controllers/WeatherForecastController.cs" relfile="SistemaGestionAuditoriaBackend/Controllers/WeatherForecastController.cs" line="15" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
