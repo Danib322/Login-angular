@@ -26,7 +26,7 @@ export class AgregarEditarUsuarioComponent implements OnInit {
     
     this.form =this.formbuilder.group(
       {
-        nombreUsuario: ['', Validators.required],
+        username: ['', Validators.required],
         cedula: ['', Validators.required],
         tipoUsuario: ['', Validators.required],
         claveUsuario: ['', Validators.required]
@@ -41,9 +41,9 @@ export class AgregarEditarUsuarioComponent implements OnInit {
         this.service.getUsuarioUnico(this.id).subscribe({next: (value) => {
           this.form =this.formbuilder.group(
             {
-              nombreUsuario:[value.nombreUsuario],
+              username:[value.username],
               cedula: [value.cedula],
-              tipoUsuario: [value.tipoUsuario],
+              Tipo: [value.Tipo],
               claveUsuario: [value.claveUsuario]
             })
         }})
@@ -61,9 +61,9 @@ export class AgregarEditarUsuarioComponent implements OnInit {
     { 
       const usuario= {
         usuarioId:this.id,
-        nombreUsuario: this.form.get('nombreUsuario')!.value,
+        username: this.form.get('nombreUsuario')!.value,
         cedula:this.form.get('cedula')!.value,
-        tipoUsuario:this.form.get('tipoUsuario')!.value,
+        Tipo:this.form.get('tipoUsuario')!.value,
         claveUsuario:this.form.get('claveUsuario')!.value
       }
       this.service.updateUsuarios(this.id,usuario).subscribe( data =>{       
@@ -73,9 +73,9 @@ export class AgregarEditarUsuarioComponent implements OnInit {
     else
     {
       const usuario= {
-        nombreUsuario: this.form.get('nombreUsuario')!.value,
+        username: this.form.get('nombreUsuario')!.value,
         cedula:this.form.get('cedula')!.value,
-        tipoUsuario:this.form.get('tipoUsuario')!.value,
+        Tipo:this.form.get('tipoUsuario')!.value,
         claveUsuario:this.form.get('claveUsuario')!.value
       }
       this.service.addUsuario(usuario).subscribe( data =>{       

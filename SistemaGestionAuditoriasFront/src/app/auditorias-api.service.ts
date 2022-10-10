@@ -26,13 +26,13 @@ export class AuditoriasAPIService {
     return this.http.get<Usuario>(this.auditoriasAPIUrl+`/Usuarios/${id}`);
   }
 
-  addUsuario(data:{nombreUsuario:string,cedula:string,tipoUsuario:string,claveUsuario:string})
+  addUsuario(data:{username:string,cedula:string,Tipo:string,claveUsuario:string})
   {
     return this.http.post(this.auditoriasAPIUrl +'/Usuarios',data);
 
   }
 
-  updateUsuarios(id:number, data:{ usuarioId:number, nombreUsuario:string,cedula:string,tipoUsuario:string,claveUsuario:string})
+  updateUsuarios(id:number, data:{ usuarioId:number, username:string,cedula:string,Tipo:string,claveUsuario:string})
   {
     return this.http.put(this.auditoriasAPIUrl+`/Usuarios/${id}`,data);
   }

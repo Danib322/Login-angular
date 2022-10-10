@@ -8,10 +8,11 @@ import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 
 const rutas:Routes=[
-    { path: '', component:UsuariosComponent},
+    { path: '', component:UsuariosComponent,canActivate: [AuthGuard]},
     {path:'home', component:UsuariosComponent ,canActivate: [AuthGuard]},
-    {path:'agregar/:id', component:AgregarEditarUsuarioComponent },
-    {path:'editar/:id', component:AgregarEditarUsuarioComponent},
+    {path:'agregar/:id', component:AgregarEditarUsuarioComponent ,canActivate: [AuthGuard]},
+    {path:'agregar', component:AgregarEditarUsuarioComponent ,canActivate: [AuthGuard]},
+    {path:'editar/:id', component:AgregarEditarUsuarioComponent,canActivate: [AuthGuard]},
     {path:'login', component:LoginComponent}
 
 ];

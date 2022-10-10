@@ -47,7 +47,11 @@ export class MostrarUsuariosComponent implements OnInit {
   {
     this.router.navigate(['agregar',0])
   }
-
+  cerrarsecion()
+  { 
+    localStorage.removeItem('jwt');
+    this.router.navigateByUrl(`/login`);
+  }
   
 
 }

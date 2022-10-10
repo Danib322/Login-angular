@@ -1,7 +1,7 @@
 export interface Usuario
 {
-    nombreUsuario:string,
+    username:string,
     cedula:string,
-    tipoUsuario:string,
+    Tipo:string,
     claveUsuario:string
 }

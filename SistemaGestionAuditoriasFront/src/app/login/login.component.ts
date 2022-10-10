@@ -22,7 +22,7 @@ export class LoginComponent {
             .subscribe(() => {
                 this.router.navigate(['/']);
             }, error => {
-                alert('Login failed');
+                alert('Acceso denegado credenciales incorrectas');
                 console.log(error)
             });
     }

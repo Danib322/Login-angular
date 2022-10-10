@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{HttpClientModule} from'@angular/common/http';
+import{HttpClientModule, HTTP_INTERCEPTORS} from'@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -11,6 +11,7 @@ import { RutasAppModule } from './rutas-app.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     
     
   ],
-  providers: [AuditoriasAPIService],
+  providers: [AuditoriasAPIService, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
