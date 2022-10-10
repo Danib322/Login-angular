@@ -5,12 +5,14 @@ import { AgregarEditarUsuarioComponent } from './agregar-editar-usuario/agregar-
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { MostrarUsuariosComponent } from './mostrar-usuarios/mostrar-usuarios.component';
 import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 const rutas:Routes=[
     { path: '', component:UsuariosComponent},
     {path:'home', component:UsuariosComponent ,canActivate: [AuthGuard]},
     {path:'agregar/:id', component:AgregarEditarUsuarioComponent },
     {path:'editar/:id', component:AgregarEditarUsuarioComponent},
+    {path:'login', component:LoginComponent}
 
 ];
 

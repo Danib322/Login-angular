@@ -1,0 +1,19 @@
+<form class="ContentForm" [formGroup]="form" (ngSubmit)="login()">
+    <div>
+        <h1>Usuario</h1>
+    </div>
+    <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" formControlName="username" placeholder="Nombre de usuario">
+
+    </div>
+    <div class="form-group">
+        <label for="">Clave</label>
+        <input type="text" formControlName="password" placeholder="Clave de usuario">
+    </div>
+    <div class="form-group">
+        <button class="btn btnPrimary" [disabled]="form.invalid" type="submit">
+            Login
+        </button>
+    </div>
+</form>
